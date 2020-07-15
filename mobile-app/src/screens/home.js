@@ -68,8 +68,8 @@ const Home = () => (
         style={styles.image}
         source={require('../images/2020-cfc-512.png')}
       />
-      <Text style={styles.subtitle}>Starter Kit</Text>
-      <Text style={styles.title}>Community Collaboration</Text>
+      <Text style={styles.subtitle}>IBM Intern Hackathon 2020</Text>
+      <Text style={styles.title}>maskFORCE</Text>
       <Text style={styles.content}>
         There is a growing interest in enabling communities to cooperate among
         themselves to solve problems in times of crisis, whether it be to
@@ -90,7 +90,7 @@ const Home = () => (
         <TouchableOpacity onPress={() => Linking.openURL('https://developer.ibm.com/callforcode')}>
           <Text style={styles.button}>Learn more</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => Linking.openURL('https://github.com/Call-for-Code/Solution-Starter-Kit-Cooperation-2020')}>
+        <TouchableOpacity onPress={() => Linking.openURL('https://github.com/noaheli/maskFORCE')}>
           <Text style={styles.button}>Get the code</Text>
         </TouchableOpacity>
       </View>
