@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_SolutionStarterKitCooperation2020App_tvOSTests : NSObject
+@end
+@implementation PodsDummy_Pods_SolutionStarterKitCooperation2020App_tvOSTests
+@end
