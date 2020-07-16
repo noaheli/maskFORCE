@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
 });
 
 const EditResource = (props) => {
-  const clearItem = { userID: userID(), e: 'Food', name: '', description: '', location: '', contact: '', quantity: '1' }
+  const clearItem = { userID: userID(), e: 'Help', name: '', description: '', location: '', contact: '', quantity: '1' }
   const [item, setItem] = React.useState(clearItem);
   const [useLocation, setUseLocation] = React.useState(false);
   const [position, setPosition] = React.useState({})
@@ -178,7 +178,7 @@ const EditResource = (props) => {
           />
         </View>
         <View style={styles.quantityArea}>
-          <Text style={styles.label}>Quantity</Text>
+          <Text style={styles.label}># of People (Approx)</Text>
           <TextInput
             style={styles.textInput}
             value={item.quantity}
@@ -200,7 +200,7 @@ const EditResource = (props) => {
         onSubmitEditing={updateItem}
         returnKeyType='send'
         enablesReturnKeyAutomatically={true}
-        placeholder='e.g., Tomotatoes'
+        placeholder='e.g., No masks or social distancing'
         blurOnSubmit={false}
       />
       <Text style={styles.label}>Contact</Text>
@@ -221,7 +221,7 @@ const EditResource = (props) => {
         onSubmitEditing={updateItem}
         returnKeyType='send'
         enablesReturnKeyAutomatically={true}
-        placeholder='e.g., small baskets of cherry tomatoes'
+        placeholder='e.g., large group of people near park'
       />
       <Text style={styles.label}>Location</Text>
       <View style={styles.checkboxContainer}>
