@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
-    backgroundColor: '#FFFFFF'
+    backgroundColor: '#FFFFFF',
   },
   scroll: {
     paddingLeft: 20,
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   buttonGroup: {
     flex: 1,
     paddingTop: 15,
-    width: 175
+    width: 175,
   },
   button: {
     backgroundColor: '#1062FE',
@@ -57,7 +57,8 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     padding: 12,
     textAlign:'center',
-    marginTop: 15
+    marginTop: 15,
+    borderRadius:20,
   }
 });
 

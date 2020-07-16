@@ -41,7 +41,8 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     padding: 12,
     textAlign:'center',
-    marginTop: 15
+    marginTop: 15,
+    borderRadius:20,
   },
   searchResultText: {
     fontFamily: 'IBMPlexSans-Bold',
