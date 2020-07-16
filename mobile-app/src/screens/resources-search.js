@@ -6,7 +6,7 @@ import { search } from '../lib/utils';
 
 const styles = StyleSheet.create({
   outerView: {
-    backgroundColor: '#FFF',
+    backgroundColor: '#982727',
     width: '100%',
     height: '100%'
   },
@@ -34,8 +34,8 @@ const styles = StyleSheet.create({
     marginBottom: 10
   },
   button: {
-    backgroundColor: '#1062FE',
-    color: '#FFFFFF',
+    backgroundColor: '#F5B7B7',
+    color: '#982727',
     fontFamily: 'IBMPlexSans-Medium',
     fontSize: 16,
     overflow: 'hidden',
@@ -47,10 +47,10 @@ const styles = StyleSheet.create({
   searchResultText: {
     fontFamily: 'IBMPlexSans-Bold',
     padding: 10,
-    color: '#1062FE'
+    color: '#F5B7B7'
   },
   flatListView: {
-    backgroundColor: '#FFF'
+    backgroundColor: '#982727'
   },
   itemTouchable: {
     flexDirection: 'column',
@@ -67,16 +67,17 @@ const styles = StyleSheet.create({
   itemName: {
     fontSize: 24,
     fontFamily: 'IBMPlexSans-Medium',
+    color: '#F5B7B7'
   },
   itemQuantity: {
     fontSize: 14,
     fontFamily: 'IBMPlexSans-Medium',
-    color: 'gray'
+    color: '#F5B7B7'
   },
   itemDescription: {
     fontSize: 14,
     fontFamily: 'IBMPlexSans-Medium',
-    color: 'gray'
+    color: '#F5B7B7'
   }
 });
 
