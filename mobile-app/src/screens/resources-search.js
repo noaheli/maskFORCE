@@ -6,7 +6,7 @@ import { search } from '../lib/utils';
 
 const styles = StyleSheet.create({
   outerView: {
-    backgroundColor: '#FFF',
+    backgroundColor: '#982727',
     width: '100%',
     height: '100%'
   },
@@ -34,22 +34,23 @@ const styles = StyleSheet.create({
     marginBottom: 10
   },
   button: {
-    backgroundColor: '#1062FE',
-    color: '#FFFFFF',
+    backgroundColor: '#F5B7B7',
+    color: '#982727',
     fontFamily: 'IBMPlexSans-Medium',
     fontSize: 16,
     overflow: 'hidden',
     padding: 12,
     textAlign:'center',
-    marginTop: 15
+    marginTop: 15,
+    borderRadius:20,
   },
   searchResultText: {
     fontFamily: 'IBMPlexSans-Bold',
     padding: 10,
-    color: '#1062FE'
+    color: '#F5B7B7'
   },
   flatListView: {
-    backgroundColor: '#FFF'
+    backgroundColor: '#982727'
   },
   itemTouchable: {
     flexDirection: 'column',
@@ -66,21 +67,22 @@ const styles = StyleSheet.create({
   itemName: {
     fontSize: 24,
     fontFamily: 'IBMPlexSans-Medium',
+    color: '#F5B7B7'
   },
   itemQuantity: {
     fontSize: 14,
     fontFamily: 'IBMPlexSans-Medium',
-    color: 'gray'
+    color: '#F5B7B7'
   },
   itemDescription: {
     fontSize: 14,
     fontFamily: 'IBMPlexSans-Medium',
-    color: 'gray'
+    color: '#F5B7B7'
   }
 });
 
 const SearchResources = function ({ route, navigation }) {
-  const [query, setQuery] = React.useState({ type: 'Food', name: '' });
+  const [query, setQuery] = React.useState({ type: 'Help', name: '' });
   const [items, setItems] = React.useState([]);
   const [info, setInfo] = React.useState('');
 
@@ -135,7 +137,7 @@ const SearchResources = function ({ route, navigation }) {
           onSubmitEditing={searchItem}
           returnKeyType='send'
           enablesReturnKeyAutomatically={true}
-          placeholder='e.g., Tomotatoes'
+          placeholder='e.g., No masks or social distancing'
           blurOnSubmit={false}
         />
         <TouchableOpacity onPress={searchItem}>

@@ -92,7 +92,7 @@ const DonateStackLayout = () => (
 
 const SearchStackLayout = () => (
   <Stack.Navigator>
-    <Stack.Screen name='Search Resources' component={SearchResources} options={ResourcesStackOptions} />
+    <Stack.Screen name='Search Reports' component={SearchResources} options={ResourcesStackOptions} />
     <Stack.Screen name='Chat' component={Chat} />
     <Stack.Screen name='Map' component={Map} />
   </Stack.Navigator>

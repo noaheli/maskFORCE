@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   subtitle: {
     fontFamily: 'IBMPlexSans-Light',
     fontSize: 24,
-    color: '#323232',
+    color: '#F5B7B7',
     textDecorationColor: '#D0E2FF',
     textDecorationLine: 'underline',
     paddingBottom: 5,
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
   },
   content: {
     fontFamily: 'IBMPlexSans-Light',
-    color: '#323232',
+    color: '#F5B7B7',
     marginTop: 10,
     marginBottom: 10,
     fontSize: 16
@@ -49,24 +49,26 @@ const styles = StyleSheet.create({
   buttonGroup: {
     flex: 1,
     paddingTop: 15,
-    width: 175
+    width: 175,
   },
   button: {
-    backgroundColor: '#1062FE',
-    color: '#FFFFFF',
+    backgroundColor: '#F5B7B7',
+    color: '#982727',
     fontFamily: 'IBMPlexSans-Medium',
     fontSize: 16,
     overflow: 'hidden',
     padding: 12,
     textAlign:'center',
-    marginTop: 15
+    marginTop: 15,
+    borderRadius:20,
   }
 });
 
 const Home = () => (
   <View style={styles.center}>
     <ScrollView style={styles.scroll}>
-      <Text style={styles.title}>maskForce</Text>
+      <Text style={styles.subtitle}>IBM Intern Hackathon 2020</Text>
+      <Text style={styles.title}>maskFORCE</Text>
       <Text style={styles.content}>
         There is a growing interest in enabling communities to cooperate among
         themselves to solve problems in times of crisis, whether it be to
@@ -74,22 +76,10 @@ const Home = () => (
         other local services like volunteer deliveries.
       </Text>
       <Text style={styles.content}>
-        What is needed is a solution that empowers communities to easily connect
-        and provide this information to each other.
-      </Text>
-      <Text style={styles.content}>
-        This solution starter kit provides a mobile application, along with
-        server-side components, that serves as the basis for developers to build
-        out a community cooperation application that addresses local needs for
-        food, equipment, and resources.dfgdfgdjkhgkjdfhgkdjfghkdfhgdfg
-                    dfgdfgdjkhgkjdfhgkdjfghkdfhgdfgdf
-                    backgroundColorfg
-                    dfgdfgdjkhgkjdfhgkdjfghkdfhgdfgfgdf
-                    backgroundColorfg
-                    dfgdfgdjkhgkjdfhgkdjfghkdfhgdfgfgdffg
-                    dfgdfgdjkhgkjdfhgkdjfghkdfhgdfgfgdffg
-                    dfgdfgdjkhgkjdfhgkdjfghkdfhgdfgfgdffg
-                    
+        This app allows people to alert communities and local volunteers of areas with 
+        dense gatherings. Once alerted, community volunteers will arrive and provide 
+        them with protection such as masks and hand sanitizers, as well as educate
+        them on the importance of social distancing.
       </Text>
       <View style={styles.buttonGroup}>
         <TouchableOpacity onPress={() => Linking.openURL('https://developer.ibm.com/callforcode')}>
@@ -104,3 +94,4 @@ const Home = () => (
 );
 
 export default Home;
+
