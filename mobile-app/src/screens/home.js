@@ -64,10 +64,6 @@ const styles = StyleSheet.create({
 const Home = () => (
   <View style={styles.center}>
     <ScrollView style={styles.scroll}>
-      <Image
-        style={styles.image}
-        source={require('../images/2020-cfc-512.png')}
-      />
       <Text style={styles.subtitle}>IBM Intern Hackathon 2020</Text>
       <Text style={styles.title}>maskFORCE</Text>
       <Text style={styles.content}>
@@ -77,14 +73,10 @@ const Home = () => (
         other local services like volunteer deliveries.
       </Text>
       <Text style={styles.content}>
-        What is needed is a solution that empowers communities to easily connect
-        and provide this information to each other.
-      </Text>
-      <Text style={styles.content}>
-        This solution starter kit provides a mobile application, along with
-        server-side components, that serves as the basis for developers to build
-        out a community cooperation application that addresses local needs for
-        food, equipment, and resources.
+        This app allows people to alert communities and local volunteers of areas with 
+        dense gatherings. Once alerted, community volunteers will arrive and provide 
+        them with protection such as masks and hand sanitizers, as well as educate
+        them on the importance of social distancing.
       </Text>
       <View style={styles.buttonGroup}>
         <TouchableOpacity onPress={() => Linking.openURL('https://developer.ibm.com/callforcode')}>
@@ -99,3 +91,4 @@ const Home = () => (
 );
 
 export default Home;
+
