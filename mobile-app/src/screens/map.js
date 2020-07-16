@@ -35,7 +35,7 @@ const Map = (props) => {
         })
         .catch(err => {
           console.log(err)
-          Alert.alert('ERROR', 'Please try again. If the problem persists contact an administrator.', [{text: 'OK'}]);
+          
         });
     }
   };

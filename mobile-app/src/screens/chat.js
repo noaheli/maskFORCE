@@ -166,9 +166,7 @@ const Chat = function ({ navigation }) {
           .then(handleMessageResponse)
           .catch(err => {
             console.log(err)
-            addMessages([{
-              text: 'ERROR: Please try again. If the problem persists contact an administrator.'
-            }]);
+            
           });
       });
   };

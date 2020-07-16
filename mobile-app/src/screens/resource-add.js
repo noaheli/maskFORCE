@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
 });
 
 const AddResource = function ({ navigation }) {
-  const clearItem = { userID: userID(), type: 'Food', name: '', description: '', location: '', contact: '', quantity: '1' }
+  const clearItem = { userID: userID(), type: 'Food', name: '42nd Street & 7 Avenue', description: '', location: '', contact: 'test', quantity: '1' }
   const [item, setItem] = React.useState(clearItem);
   const [useLocation, setUseLocation] = React.useState(true);
   const [position, setPosition] = React.useState({})
@@ -117,29 +117,26 @@ const AddResource = function ({ navigation }) {
         setItem({ ...clearItem, location: payload.location });
       })
       .catch(err => {
-        console.log(err);
-        Alert.alert('ERROR', 'Please try again. If the problem persists contact an administrator.', [{text: 'OK'}]);
+          console.log(err + "hehe");
+        
       });
   };
   
   return (
     <ScrollView style={styles.outerView}>
-      <View style={styles.splitView}>
-        <View style={styles.typeArea}>
-          <Text style={styles.label}>Type</Text>
-          <PickerSelect
-            style={{ inputIOS: styles.selector }}
-            value={item.type}
-            onValueChange={(t) => setItem({ ...item, type: t })}
-            items={[
-                { label: 'Food', value: 'Food' },
-                { label: 'Help', value: 'Help' },
-                { label: 'Other', value: 'Other' }
-            ]}
+          <Text style={styles.label}>Describe the Incident</Text>
+          <TextInput
+            style={styles.textInput}
+            value={item.description}
+            onChangeText={(t) => setItem({ ...item, description: t})}
+            onSubmitEditing={sendItem}
+            returnKeyType='send'
+            enablesReturnKeyAutomatically={true}
+            placeholder='e.g., maskless protesters, ...'
           />
-        </View>
+      <View style={styles.splitView}>
         <View style={styles.quantityArea}>
-          <Text style={styles.label}>Quantity</Text>
+          <Text style={styles.label}>Quantity (Estimate)</Text>
           <TextInput
             style={styles.textInput}
             value={item.quantity}
@@ -152,38 +149,7 @@ const AddResource = function ({ navigation }) {
           />
         </View>
       </View>
-
-      <Text style={styles.label}>Name</Text>
-      <TextInput
-        style={styles.textInput}
-        value={item.name}
-        onChangeText={(t) => setItem({ ...item, name: t})}
-        onSubmitEditing={sendItem}
-        returnKeyType='send'
-        enablesReturnKeyAutomatically={true}
-        placeholder='e.g., Tomotatoes'
-        blurOnSubmit={false}
-      />
-      <Text style={styles.label}>Contact</Text>
-      <TextInput
-        style={styles.textInput}
-        value={item.contact}
-        onChangeText={(t) => setItem({ ...item, contact: t})}
-        onSubmitEditing={sendItem}
-        returnKeyType='send'
-        enablesReturnKeyAutomatically={true}
-        placeholder='user@domain.com'
-      />
-      <Text style={styles.label}>Description</Text>
-      <TextInput
-        style={styles.textInput}
-        value={item.description}
-        onChangeText={(t) => setItem({ ...item, description: t})}
-        onSubmitEditing={sendItem}
-        returnKeyType='send'
-        enablesReturnKeyAutomatically={true}
-        placeholder='e.g., cans of tomatoes'
-      />
+      
       <Text style={styles.label}>Location</Text>
       <View style={styles.checkboxContainer}>
         <TouchableOpacity onPress={toggleUseLocation}>
@@ -209,9 +175,7 @@ const AddResource = function ({ navigation }) {
       />
 
       {
-        item.type !== '' &&
-        item.name.trim() !== '' &&
-        item.contact.trim() !== '' &&
+        item.description.trim() !== '' &&
         <TouchableOpacity onPress={sendItem}>
           <Text style={styles.button}>Add</Text>
         </TouchableOpacity>

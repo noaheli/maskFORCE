@@ -94,7 +94,7 @@ const EditResource = (props) => {
   React.useEffect(() => {
     props.navigation.addListener('focus', () => {
       const item = props.route.params.item;
-      setItem({ 
+      setItem({
         ...item,
         quantity: item.quantity.toString()
        });
@@ -129,17 +129,16 @@ const EditResource = (props) => {
       })
       .catch(err => {
         console.log(err);
-        Alert.alert('ERROR', err.message, [{text: 'OK'}]);
       });
   };
 
   const confirmDelete = () => {
     Alert.alert(
-      'Delete',
-      'Are you sure you want to delete this item?',
+      'Redeem',
+      'Redeem this item?',
       [
         { text: 'Cancel' },
-        { text: 'Delete', onPress: () => deleteItem() }
+        { text: 'Redeem', onPress: () => deleteItem() }
       ]
     )
   }
@@ -152,47 +151,21 @@ const EditResource = (props) => {
 
     remove(payload)
       .then(() => {
-        Alert.alert('Done', 'Your item has been deleted.', [{text: 'OK'}]);
+        Alert.alert('Done', 'This item has been completed.', [{text: 'OK'}]);
         props.navigation.goBack();
       })
       .catch(err => {
         console.log(err);
         Alert.alert('ERROR', err.message, [{text: 'OK'}]);
+          props.navigation.goBack();
       });
   };
   
+    
+
   return (
     <ScrollView style={styles.outerView}>
-      <View style={styles.splitView}>
-        <View style={styles.typeArea}>
-          <Text style={styles.label}>Type</Text>
-          <PickerSelect
-            style={{ inputIOS: styles.selector }}
-            value={item.type}
-            onValueChange={(t) => setItem({ ...item, type: t })}
-            items={[
-                { label: 'Food', value: 'Food' },
-                { label: 'Help', value: 'Help' },
-                { label: 'Other', value: 'Other' }
-            ]}
-          />
-        </View>
-        <View style={styles.quantityArea}>
-          <Text style={styles.label}>Quantity</Text>
-          <TextInput
-            style={styles.textInput}
-            value={item.quantity}
-            onChangeText={(t) => setItem({ ...item, quantity: t})}
-            onSubmitEditing={updateItem}
-            returnKeyType='send'
-            enablesReturnKeyAutomatically={true}
-            placeholder='e.g., 10'
-            keyboardType='numeric'
-          />
-        </View>
-      </View>
-
-      <Text style={styles.label}>Name</Text>
+      <Text style={styles.label}>Location</Text>
       <TextInput
         style={styles.textInput}
         value={item.name}
@@ -203,16 +176,7 @@ const EditResource = (props) => {
         placeholder='e.g., Tomotatoes'
         blurOnSubmit={false}
       />
-      <Text style={styles.label}>Contact</Text>
-      <TextInput
-        style={styles.textInput}
-        value={item.contact}
-        onChangeText={(t) => setItem({ ...item, contact: t})}
-        onSubmitEditing={updateItem}
-        returnKeyType='send'
-        enablesReturnKeyAutomatically={true}
-        placeholder='user@domain.com'
-      />
+      
       <Text style={styles.label}>Description</Text>
       <TextInput
         style={styles.textInput}
@@ -223,40 +187,32 @@ const EditResource = (props) => {
         enablesReturnKeyAutomatically={true}
         placeholder='e.g., small baskets of cherry tomatoes'
       />
-      <Text style={styles.label}>Location</Text>
-      <View style={styles.checkboxContainer}>
-        <TouchableOpacity onPress={toggleUseLocation}>
-          {
-            (useLocation)
-              ?
-              <CheckedIcon height='18' width='18'/>
-              :
-              <UncheckedIcon height='18' width='18'/>
-          }
-        </TouchableOpacity>
-        <Text style={styles.checkboxLabel}> Use my current location </Text>
-      </View>
-      <TextInput
-        style={useLocation ? styles.textInputDisabled : styles.textInput}
-        value={item.location}
-        onChangeText={(t) => setItem({ ...item, location: t})}
-        onSubmitEditing={updateItem}
-        returnKeyType='send'
-        enablesReturnKeyAutomatically={true}
-        placeholder='street address, city, state'
-      />
-
-      {
-        item.type !== '' &&
-        item.name.trim() !== '' &&
-        item.contact.trim() !== '' &&
-        <TouchableOpacity onPress={updateItem}>
-          <Text style={styles.updateButton}>Update</Text>
-        </TouchableOpacity>
-      }
+          <View style={styles.quantityArea}>
+            <Text style={styles.label}>Quantity</Text>
+            <TextInput
+              style={styles.textInput}
+              value={item.quantity}
+              onChangeText={(t) => setItem({ ...item, quantity: t})}
+              onSubmitEditing={updateItem}
+              returnKeyType='send'
+              enablesReturnKeyAutomatically={true}
+              placeholder='e.g., 10'
+              keyboardType='numeric'
+            />
+          </View>
+          <Text style={styles.label}>Angel Responder</Text>
+          <TextInput
+            style={styles.textInput}
+            value="Jimothy Parkins"
+            onChangeText={(t) => setItem({ ...item, contact: t})}
+            onSubmitEditing={updateItem}
+            returnKeyType='send'
+            enablesReturnKeyAutomatically={true}
+            placeholder='user@domain.com'
+          />
 
       <TouchableOpacity onPress={confirmDelete}>
-        <Text style={styles.deleteButton}>Delete</Text>
+        <Text style={styles.updateButton}>Complete ( 40 points )</Text>
       </TouchableOpacity>
     </ScrollView>
   );

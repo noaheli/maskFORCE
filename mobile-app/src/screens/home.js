@@ -2,13 +2,14 @@ import React from 'react';
 import { StyleSheet, View, Image, Text, TouchableOpacity, Button, Linking } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
+
 const styles = StyleSheet.create({
   center: {
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
-    backgroundColor: '#FFFFFF'
+    backgroundColor: '#982828'
   },
   scroll: {
     paddingLeft: 20,
@@ -25,7 +26,8 @@ const styles = StyleSheet.create({
   title: {
     fontFamily: 'IBMPlexSans-Medium',
     fontSize: 36,
-    color: '#323232',
+    color: '#f5b7b7',
+    
     paddingBottom: 15
   },
   subtitle: {
@@ -64,12 +66,7 @@ const styles = StyleSheet.create({
 const Home = () => (
   <View style={styles.center}>
     <ScrollView style={styles.scroll}>
-      <Image
-        style={styles.image}
-        source={require('../images/2020-cfc-512.png')}
-      />
-      <Text style={styles.subtitle}>IBM Intern Hackathon 2020</Text>
-      <Text style={styles.title}>maskFORCE</Text>
+      <Text style={styles.title}>maskForce</Text>
       <Text style={styles.content}>
         There is a growing interest in enabling communities to cooperate among
         themselves to solve problems in times of crisis, whether it be to
@@ -84,7 +81,15 @@ const Home = () => (
         This solution starter kit provides a mobile application, along with
         server-side components, that serves as the basis for developers to build
         out a community cooperation application that addresses local needs for
-        food, equipment, and resources.
+        food, equipment, and resources.dfgdfgdjkhgkjdfhgkdjfghkdfhgdfg
+                    dfgdfgdjkhgkjdfhgkdjfghkdfhgdfgdf
+                    backgroundColorfg
+                    dfgdfgdjkhgkjdfhgkdjfghkdfhgdfgfgdf
+                    backgroundColorfg
+                    dfgdfgdjkhgkjdfhgkdjfghkdfhgdfgfgdffg
+                    dfgdfgdjkhgkjdfhgkdjfghkdfhgdfgfgdffg
+                    dfgdfgdjkhgkjdfhgkdjfghkdfhgdfgfgdffg
+                    
       </Text>
       <View style={styles.buttonGroup}>
         <TouchableOpacity onPress={() => Linking.openURL('https://developer.ibm.com/callforcode')}>
