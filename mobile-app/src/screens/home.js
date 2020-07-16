@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#982727',
   },
   scroll: {
     paddingLeft: 20,
@@ -25,13 +25,13 @@ const styles = StyleSheet.create({
   title: {
     fontFamily: 'IBMPlexSans-Medium',
     fontSize: 36,
-    color: '#323232',
+    color: '#F5B7B7',
     paddingBottom: 15
   },
   subtitle: {
     fontFamily: 'IBMPlexSans-Light',
     fontSize: 24,
-    color: '#323232',
+    color: '#F5B7B7',
     textDecorationColor: '#D0E2FF',
     textDecorationLine: 'underline',
     paddingBottom: 5,
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   },
   content: {
     fontFamily: 'IBMPlexSans-Light',
-    color: '#323232',
+    color: '#F5B7B7',
     marginTop: 10,
     marginBottom: 10,
     fontSize: 16
@@ -50,8 +50,8 @@ const styles = StyleSheet.create({
     width: 175,
   },
   button: {
-    backgroundColor: '#1062FE',
-    color: '#FFFFFF',
+    backgroundColor: '#F5B7B7',
+    color: '#982727',
     fontFamily: 'IBMPlexSans-Medium',
     fontSize: 16,
     overflow: 'hidden',
