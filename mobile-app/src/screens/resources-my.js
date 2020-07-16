@@ -5,7 +5,8 @@ import { search, userID } from '../lib/utils'
 
 const styles = StyleSheet.create({
   flatListView: {
-    backgroundColor: '#982727'
+  color: "#000000",
+    backgroundColor: '#ffffff'
   },
   itemTouchable: {
     flexDirection: 'column',
@@ -22,7 +23,7 @@ const styles = StyleSheet.create({
   itemName: {
     fontSize: 24,
     fontFamily: 'IBMPlexSans-Medium',
-    color: '#F5B7B7'
+    color: '#000000'
   },
   itemDescription: {
     fontSize: 14,
